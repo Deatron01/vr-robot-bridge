@@ -1,0 +1,4 @@
+# rospy and geometry_msgs come from the ROS Noetic install sourced in this
+# shell (source /opt/ros/noetic/setup.bash), not from PyPI -- do not add
+# them here.
+websockets>=12.0,<13.0

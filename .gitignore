@@ -27,3 +27,6 @@ logs/
 .idea/
 Thumbs.db
 .DS_Store
+
+# Unity per-user editor state
+UserSettings/
