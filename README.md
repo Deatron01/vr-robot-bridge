@@ -1,8 +1,7 @@
-<p align="center">
-  <img src="./.github/assets/banner.svg" alt="vr-robot-bridge — Live VR poses into a ROS robot hand, mirrored in Unity." width="100%" />
-</p>
+<h1 align="center">vr-robot-bridge</h1>
 
 <p align="center">
+  Live VR poses into a ROS robot hand, mirrored in Unity.<br />
   <samp>C# · PYTHON · ROS NOETIC · UNITY 6 · WSL2</samp>
 </p>
 
@@ -98,5 +97,7 @@ non-interactive shells, `setsid`, the `pkill` self-match trap).
 <br />
 
 <p align="center">
+  <a href="https://github.com/Deatron01"><img src="https://raw.githubusercontent.com/Deatron01/Deatron01/main/assets/icon.png" width="56" alt="Dea" /></a><br />
+  <sub><i>Little chaos in a quiet mind.</i></sub><br />
   <sub><samp>MORE WORK AT <a href="https://github.com/Deatron01">GITHUB.COM/DEATRON01</a></samp></sub>
 </p>
