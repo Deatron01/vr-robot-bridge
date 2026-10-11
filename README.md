@@ -1,4 +1,12 @@
-# VR-Telemetry → ROS ↔ Unity Bridge
+<p align="center">
+  <img src="./.github/assets/banner.svg" alt="vr-robot-bridge — Live VR poses into a ROS robot hand, mirrored in Unity." width="100%" />
+</p>
+
+<p align="center">
+  <samp>C# · PYTHON · ROS NOETIC · UNITY 6 · WSL2</samp>
+</p>
+
+### <samp>01 — WHAT IT IS</samp>
 
 Streams live VR telemetry (HMD pose, controller poses, controller input) to a
 ROS-based robot simulator and visualises it in a Unity XR application, for 1:1
@@ -7,7 +15,7 @@ simulation between the user's VR motions and a Gazebo/MoveIt robot hand.
 See `docs/implementation_plan.md` for the original plan. The living task
 breakdown (with per-task status) is in the ROS claude.ai project docs.
 
-## Layout
+### <samp>02 — LAYOUT</samp>
 
 ```
 vr-robot-bridge/
@@ -25,7 +33,7 @@ vr-robot-bridge/
         └── RosUnityCoordinates.cs  ROS -> Unity conversion
 ```
 
-## Environment
+### <samp>03 — ENVIRONMENT</samp>
 
 irob-saf (ROS Noetic + dVRK) needs Linux, so the ROS side runs inside **WSL2,
 distro `Ubuntu-20.04`** — see `docs/environment_setup.md`. Unity runs natively
@@ -36,7 +44,7 @@ on Windows and reaches rosbridge across the WSL boundary.
   `ethzasl_icp_mapping`, `irob-saf`
 - `ros-noetic-rosbridge-server` 0.11.17, `websockets` 12.0
 
-## Running the whole chain (no headset required)
+### <samp>04 — RUNNING THE WHOLE CHAIN (NO HEADSET REQUIRED)</samp>
 
 Inside WSL2:
 
@@ -55,7 +63,7 @@ for verification.
 See `ros_workspace/bridge/README.md` for the gotchas (ROS sourcing in
 non-interactive shells, `setsid`, the `pkill` self-match trap).
 
-## Networking
+### <samp>05 — NETWORKING</samp>
 
 - **Windows → WSL2 works on `localhost`** — Unity connects to
   `ws://localhost:9090`. Verified.
@@ -65,7 +73,7 @@ non-interactive shells, `setsid`, the `pkill` self-match trap).
   Core Hub (`:8000` on Windows) is not yet reachable from the bridge, and why
   `mock_hub.py` runs inside WSL2.
 
-## Status
+### <samp>06 — STATUS</samp>
 
 - [x] WSL2 + ROS Noetic + irob-saf/dVRK workspace built (45/45 + 8/8 packages)
 - [x] ROS 1 bridge written and running; `/vrtelemetry/hmd_pose` publishes at
@@ -82,7 +90,13 @@ non-interactive shells, `setsid`, the `pkill` self-match trap).
 - [ ] XR viewing (XR Interaction Toolkit + OpenXR against SteamVR)
 - [ ] Robot hand model (dVRK PSM xacro vs simple 6-DOF hand) and Gazebo/MoveIt
 
-## Related
+### <samp>07 — RELATED</samp>
 
 - Course: [Advanced ROS Course materials](https://abc-irobotics.github.io/advanced_ros_course_materials_hu/)
 - Framework: [ABC-iRobotics/irob-saf](https://github.com/ABC-iRobotics/irob-saf)
+
+<br />
+
+<p align="center">
+  <sub><samp>MORE WORK AT <a href="https://github.com/Deatron01">GITHUB.COM/DEATRON01</a></samp></sub>
+</p>
